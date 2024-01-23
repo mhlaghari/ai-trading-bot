@@ -1,0 +1,5 @@
+2024-01-22 21:03:15,272: root: INFO: MLTrader : Executing the initialize lifecycle method
+2024-01-22 21:03:15,275: root: INFO: Backtesting finished
+2024-01-22 21:03:15,276: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-01-22 21:03:15,341: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
+2024-01-22 21:03:15,341: backtest_stats: INFO: Backtest took 0:00:00.071497 for a speed of 0.000

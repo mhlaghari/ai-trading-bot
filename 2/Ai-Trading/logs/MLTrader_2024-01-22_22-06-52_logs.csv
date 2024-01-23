@@ -1,0 +1,37 @@
+2024-01-22 22:06:52,220: root: INFO: MLTrader : Executing the initialize lifecycle method
+2024-01-22 22:06:53,180: root: INFO: Current backtesting datetime 2020-01-02 08:30:00-05:00
+2024-01-22 22:06:53,182: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-01-22 22:06:53,183: root: INFO: Current backtesting datetime 2020-01-02 09:30:00-05:00
+2024-01-22 22:06:53,183: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-01-22 22:06:53,184: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-01-22 22:06:53[0m
+2024-01-22 22:06:53,185: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-01-22 22:06:53,192: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-01-22 22:06:53,194: root: ERROR: 'REST' object has no attribute 'get_news'
+2024-01-22 22:06:53,195: root: ERROR: Traceback (most recent call last):
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/strategies/strategy_executor.py", line 829, in run
+    self._run_trading_session()
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/strategies/strategy_executor.py", line 780, in _run_trading_session
+    self._on_trading_iteration()
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/strategies/strategy_executor.py", line 274, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/strategies/strategy_executor.py", line 298, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/strategies/strategy_executor.py", line 87, in func_output
+    return func_input(self, *args, **kwargs)
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/strategies/strategy_executor.py", line 378, in _on_trading_iteration
+    on_trading_iteration()
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/tools/decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+  File "/Users/mhlaghari/miniconda3/envs/Ai-Trading/lib/python3.9/site-packages/lumibot/tools/decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+  File "/Users/mhlaghari/Documents/Documents/MyProjects/ai-trading-bot/2/Ai-Trading/test2.py", line 55, in on_trading_iteration
+    probability, sentiment = self.get_sentiment()
+  File "/Users/mhlaghari/Documents/Documents/MyProjects/ai-trading-bot/2/Ai-Trading/test2.py", line 46, in get_sentiment
+    news = self.api.get_news(symbol=self.symbol,
+AttributeError: 'REST' object has no attribute 'get_news'
+
+2024-01-22 22:06:53,195: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-01-22 22:06:53,198: root: INFO: Backtesting finished
+2024-01-22 22:06:53,200: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-01-22 22:06:53,262: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
+2024-01-22 22:06:53,262: backtest_stats: INFO: Backtest took 0:00:01.043501 for a speed of 0.000
